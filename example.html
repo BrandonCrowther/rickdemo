@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div id="topbar" style="position:fixed;width:100%;top:0;color:green;background-color:coral;"><span>This is a topbar</span></div>
-  <div>
+    <div id="topbar" style="position:fixed;width:100%;top:0;color:green;background-color:coral;">TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR TOPBAR</div>
+  <div id="actual_page">
     <p>Lorem ipsum dolor sit amet, at vulputate incorrupte usu, at persius reformidans vim, posse detraxit cum ut. Pri ne autem fuisset, mei nibh viderer et, pro at democritum sadipscing. Et ferri legimus eam. Te tation facilisis abhorreant mel, an nulla bonorum sed. Vix sale inimicus te.</p>
 
     <p>Pro quot lobortis eu, at nam eirmod noluisse mnesarchum. Labores sensibus concludaturque ea eam. Eum in timeam tamquam omittantur, an accusam eligendi pri. Cu cibo virtute mei, his adipisci tractatos ut, ocurreret voluptatum ut vim. Primis audire mei et, et cum quando malorum accusamus, his at semper iriure dissentiet. Ei eam quis legere principes.</p>
@@ -89,5 +89,22 @@
 </div>
 
 </body>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+    function resetPadding(){
+        var height = $('#topbar').height();
+        console.log(height);
+        $("#actual_page").css("paddingTop", height + "px"); 
+    }
+        
+    $(function() {
+        resetPadding();
+    });
+    
+    $(window).resize(function(){
+        resetPadding();
+    });
+    </script>
 
 </html>
